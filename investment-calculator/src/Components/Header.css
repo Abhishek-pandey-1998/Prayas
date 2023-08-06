@@ -1,0 +1,23 @@
+.Appheader {
+    background: linear-gradient(180deg, brown, rgb(121, 63, 77));
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  .App-logo {
+    align-items: center;
+    justify-content: center;
+    color: brown;
+    height: 20vmin;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
