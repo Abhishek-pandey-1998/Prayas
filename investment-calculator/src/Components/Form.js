@@ -62,7 +62,7 @@ function Form(){
                 </button>
                 </p>
             </form>
-            {clicked && <DetailsTable data={input} />}
+            {clicked ? <DetailsTable data={input} /> : <center><h5>Data not available for calculation !!!</h5></center>}
         </>
     );
 }
