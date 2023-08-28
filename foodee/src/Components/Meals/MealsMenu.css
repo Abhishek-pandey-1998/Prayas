@@ -1,0 +1,14 @@
+.Menucard {
+    display: flex;
+    width: 60rem;
+    padding: 1rem;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+    margin-block-start: 50px;
+    box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+    background:linear-gradient(180deg,white, #f7f0f1);
+    margin-bottom: 50px;
+
+}
