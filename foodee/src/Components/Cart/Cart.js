@@ -7,7 +7,6 @@ function Cart(props){
 
   const cartCtx = useContext(CartContext);
 
-  console.log(cartCtx);
   const cartItems = (
     <>
         {cartCtx.items.map((item) => (

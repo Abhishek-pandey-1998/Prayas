@@ -16,6 +16,15 @@ function MealItem(props){
         });
     }
 
+    function RemoveFromCart(amt){
+        cartCtx.removeItem({
+            id: props.Meal.id,
+            dish: props.Meal.dish,
+            price:props.Meal.price,
+            amount:amt
+        });
+    }
+
     return(
         <li className="meal">
             <div className='details'>
@@ -25,7 +34,7 @@ function MealItem(props){
             </div>
             <div className='formDiv'>
                 <img src={props.Meal.Image} alt='ItemImage' className='img'></img>
-                <InputForm onAdd={addToCart}></InputForm>
+                <InputForm onAdd={addToCart} onRemove={RemoveFromCart}></InputForm>
             </div>
         </li>
     );
