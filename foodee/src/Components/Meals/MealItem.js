@@ -34,7 +34,7 @@ function MealItem(props){
             </div>
             <div className='formDiv'>
                 <img src={props.Meal.Image} alt='ItemImage' className='img'></img>
-                <InputForm onAdd={addToCart} onRemove={RemoveFromCart}></InputForm>
+                <InputForm onAdd={addToCart} onRemove={RemoveFromCart} item={props.Meal}></InputForm>
             </div>
         </li>
     );

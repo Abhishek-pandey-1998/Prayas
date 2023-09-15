@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import './InputForm.css';
 import QuantityInput from './QuantityInput';
 
@@ -28,7 +28,8 @@ function InputForm(props){
         <>
         <form /*onSubmit={submitHandler}*/>
             {/*<input placeholder='Amount' ref={amountRef}></input>*/}
-            {clicked? <QuantityInput onAdd={props.onAdd} onRemove={props.onRemove} onZeroRemove={RemoveButtonHandler}/> : <button type='button' className='AddButton' onClick={AddClickHandler}>+ Add</button>}
+            {clicked? <QuantityInput onAdd={props.onAdd} onRemove={props.onRemove} onZeroRemove={RemoveButtonHandler} item={props.item}/> 
+            : <button type='button' className='AddButton' onClick={AddClickHandler}>+ Add</button>}
         </form>
         </>
     );

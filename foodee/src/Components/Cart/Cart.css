@@ -1,9 +1,32 @@
 .cartItems {
-    display :block;
+    display :flex;
     margin: 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid #ccc;
 }
+
+.itemDetails{
+  width: 50%;
+}
+
+.control{
+  width: 50%;
+}
+
+.cartFormControls{
+  display: flex;
+  margin-left: 30%;
+  margin-right: 35%;
+}
+
+.cartFormControls > button{
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+
 
 .total {
   display: flex;
@@ -15,7 +38,12 @@
 }
 
 .totalAmount{
+  display: flex;
   margin: 1rem;
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: space-between;
+  margin-right: 100px;
 }
 
 .actions {

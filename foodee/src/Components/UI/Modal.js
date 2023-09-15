@@ -7,7 +7,7 @@ function Modal(props){
     return(
         <>
         {ReactDOM.createPortal(
-            <div className="backdrop" onClick={props.onClick}>
+            <div className="backdrop" /*onClick={props.onClick} */>
                 <div className='overlay'>
                     {props.children}
                 </div>

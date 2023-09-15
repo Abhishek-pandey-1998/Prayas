@@ -26,6 +26,13 @@ function AvailableMeals(){
             description : "Served with spicy sambahar and coconut chutney.",
             price : 99,
             Image : idli
+        },
+        {
+            id: 4,
+            dish : "Idli Sambhar",
+            description : "Served with spicy sambahar and coconut chutney.",
+            price : 99,
+            Image : idli
         }
     ];
 

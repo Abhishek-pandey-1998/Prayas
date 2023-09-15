@@ -1,4 +1,6 @@
-import { useReducer, useState } from "react";
+import { useContext, useReducer } from "react";
+import CartContext from "../../Store/cart-context";
+import './QuantityInput.css';
 
 function ReducerFunction(state,action){
     if(action.type==="Increment"){
@@ -13,13 +15,23 @@ function ReducerFunction(state,action){
 }
 
 function QuantityInput(props){
-    const intial = 1;
-    const [value,dispatch] = useReducer(ReducerFunction,intial);
-
+    const cartCtx = useContext(CartContext);
+    const [value,dispatch] = useReducer(ReducerFunction,1);
+    const index = cartCtx.items.findIndex((x)=>x.id===props.item.id);
+    if(index<0){
+        props.onZeroRemove(false);
+    }
+    else if(cartCtx.items[index].amount!==value){
+        if(cartCtx.items[index].amount>value){
+            valueIncrement();
+        }
+        else if(cartCtx.items[index].amount<value){
+            valueDecrement();
+        }
+    }
     function IncrementHandler(){
         dispatch({type:"Increment"});
         props.onAdd(1);
-        
     }
 
     function DecrementHandler(){
@@ -30,12 +42,20 @@ function QuantityInput(props){
         props.onRemove(1);
     }
 
+    function valueIncrement(){
+        dispatch({type:"Increment"});
+    }
+
+    function valueDecrement(){
+        dispatch({type:"Decrement"});
+    }
+
     return(
-        <>
+        <div className="controls">
             <button type="button" onClick={DecrementHandler}>-</button>
             <label>{value}</label>
             <button type="button" onClick={IncrementHandler}>+</button>
-        </>
+        </div>
     );
 }
 

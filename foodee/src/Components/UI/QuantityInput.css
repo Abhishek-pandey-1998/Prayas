@@ -1,0 +1,19 @@
+.controls button {
+    background:none;
+    color: white;
+    border: none;
+    border-radius: 90px;
+    padding: 5px;
+    width: 2rem;
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+    font-size: 15px;
+}
+
+.controls{
+    background: linear-gradient(180deg, brown, #793f4d);
+    color: white;
+    border: none;
+    border-radius: 90px;
+    margin-top: 10px;
+}
